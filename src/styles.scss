@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: #fc705a;
+$secondary: #fc4731;
+$tertiary: #fefaef;
+$grey: #a7a7a7;
+$black: #2d2d2d;
+$white: #ffffff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  // display: block;
+}
+
+body {
+  font-family: roboto;
+  background: linear-gradient(to right, $primary, $secondary);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+
+  .subheading {
+    margin-top: 5rem;
+  }
+
+  .heading {
+    margin-top: 1rem;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+}
+
+.main-right {
+  text-align: right;
+}
+
+.root-container {
+  background-color: $tertiary;
+  margin-inline: 2rem;
+  margin-block: 2rem;
+  padding-block: 2rem;
+  padding-inline: 4rem;
+  min-width: 500px;
+  border-radius: 20px;
+}
+
+.logo_option5 {
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials-container {
+  display: flex;
+  gap: 18px;
+
+  > img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.subheading {
+  color: $grey;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 28.13px;
+}
+
+.heading {
+  color: $black;
+  font-weight: 700;
+  font-size: 4.0625rem;
+  line-height: 85px;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  border: 1px solid #2d2d2d;
+  border-radius: 6px;
+  box-shadow: 2px 4px black;
+}
+
+input[type='email'] {
+  width: 22rem;
+  padding-block: 1rem;
+  padding-inline: 0.8rem;
+}
+
+input[type='submit'] {
+  width: 8rem;
+  background-color: $secondary;
+  color: white;
+  box-shadow: 2px 4px black;
+  font-size: 1rem;
+}
+
+::placeholder {
+  color: $grey;
+  font-size: 1rem;
+}
+
+@media (max-width: 1066px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
