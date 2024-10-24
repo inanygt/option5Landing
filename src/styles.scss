@@ -17,6 +17,10 @@ img {
   max-width: 100%;
 }
 
+.invalid {
+  border: 2px solid red;
+}
+
 body {
   font-family: roboto;
   background: linear-gradient(to right, $primary, $secondary);
@@ -44,13 +48,26 @@ main {
   }
 
   form {
+    position: relative;
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .error {
+      position: absolute;
+      top: 4rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: red;
+    }
   }
 }
 
 .root-container {
   background-color: $tertiary;
   margin-block: 2rem;
+  margin-inline: 2rem;
   padding-block: 2rem;
   padding-inline: 4rem;
   border-radius: 20px;
@@ -91,12 +108,6 @@ nav {
   line-height: 85px;
 }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 input {
   border: 1px solid #2d2d2d;
   border-radius: 6px;
@@ -109,12 +120,19 @@ input[type='email'] {
   padding-inline: 0.8rem;
 }
 
-input[type='submit'] {
+.button {
   flex-grow: 1;
+  border: 1px solid #2d2d2d;
+  border-radius: 6px;
+  padding-block: 1rem;
   background-color: $secondary;
   color: white;
   box-shadow: 2px 4px black;
   font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 ::placeholder {
@@ -123,6 +141,10 @@ input[type='submit'] {
 }
 
 @media (max-width: $desktop-breakpoint) {
+  .root-container {
+    margin-block: 1rem;
+  }
+
   main {
     grid-template-columns: 1fr;
 
@@ -135,6 +157,7 @@ input[type='submit'] {
 @media (max-width: $mobile-breakpoint) {
   .root-container {
     padding-inline: 1rem;
+    margin-block: 0rem;
     margin-inline: 0rem;
   }
 

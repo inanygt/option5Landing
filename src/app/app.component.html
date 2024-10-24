@@ -15,7 +15,19 @@
 
       <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">
         <label hidden for="email">Email Address</label>
+        <span
+          *ngIf="
+            notificationForm.get('email')?.hasError('required') &&
+            (notificationForm.get('email')?.dirty || notificationForm.get('email')?.touched || isSubmitted)
+          "
+          class="error"
+          >This field is required</span
+        >
         <input
+          [class.invalid]="
+            notificationForm.get('email')?.invalid &&
+            (notificationForm.get('email')?.dirty || notificationForm.get('email')?.touched || isSubmitted)
+          "
           formControlName="email"
           type="email"
           id="email"
@@ -23,7 +35,7 @@
           placeholder="Your email adress..."
           required
         />
-        <input [disabled]="notificationForm.invalid" type="submit" value="Subscribe" />
+        <button class="button" type="submit">Subscribe</button>
       </form>
     </div>
 

@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   title = 'optionFive';
   notificationForm: FormGroup;
 
+  isSubmitted = false;
+
   constructor(private fb: FormBuilder) {
     this.notificationForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -19,6 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+    this.isSubmitted = true;
     if (this.notificationForm.valid) {
       console.log(this.notificationForm.value);
     }
@@ -39,6 +42,7 @@ export class AppComponent implements OnInit {
       x: 300,
       duration: 1,
       stagger: 0.3,
+      opacity: 0,
     });
   }
 
