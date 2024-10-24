@@ -2,9 +2,9 @@
   <nav>
     <img class="logo_option5" src="/assets/logo_option5.png" alt="logo of the studio option 5" />
     <div class="socials-container">
-      <img src="/assets/logo_facebook.svg" alt="" />
-      <img src="/assets/logo_twitter.svg" alt="" />
-      <img src="/assets/logo_instagram.svg" alt="" />
+      <img src="/assets/logo_facebook.svg" alt="logo of facebook" />
+      <img src="/assets/logo_twitter.svg" alt="logo of twitter" />
+      <img src="/assets/logo_instagram.svg" alt="logo of instagram" />
     </div>
   </nav>
 
@@ -14,15 +14,21 @@
       <div class="heading">Get notified when we will launch!</div>
 
       <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">
-        <input formControlName="email" type="email" placeholder="Your email adress..." required />
+        <label hidden for="email">Email Address</label>
+        <input
+          formControlName="email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email adress..."
+          required
+        />
         <input [disabled]="notificationForm.invalid" type="submit" value="Subscribe" />
       </form>
     </div>
 
     <div class="main-right">
-      <img class="img_landing" src="/assets/image_homepage.svg" alt="Businessman excited to launch new project" />
+      <app-landing-image></app-landing-image>
     </div>
   </main>
 </div>
-
-<router-outlet />

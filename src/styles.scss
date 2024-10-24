@@ -35,7 +35,7 @@ main {
   flex-direction: column;
 
   .subheading {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
   .heading {
@@ -48,19 +48,12 @@ main {
   }
 }
 
-.main-right {
-  text-align: right;
-}
-
 .root-container {
   background-color: $tertiary;
-  margin-inline: 4rem;
+  margin-block: 2rem;
   padding-block: 2rem;
   padding-inline: 4rem;
   border-radius: 20px;
-}
-
-.logo_option5 {
 }
 
 nav {
@@ -80,7 +73,6 @@ nav {
 
     &:hover {
       cursor: pointer;
-      fill: #fc4731;
     }
   }
 }
@@ -137,11 +129,6 @@ input[type='submit'] {
     .main-right {
       justify-content: center;
     }
-  }
-
-  .root-container {
-    // padding-inline: 1rem;
-    // margin-inline: 0rem;
   }
 }
 

@@ -10,7 +10,6 @@ import gsap from 'gsap';
 })
 export class AppComponent implements OnInit {
   title = 'optionFive';
-
   notificationForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -25,38 +24,18 @@ export class AppComponent implements OnInit {
     }
   }
 
-  tl = gsap.timeline();
-
   animateSubheading() {
     gsap.from('.subheading', {
       x: -300,
-      duration: 1,
+      duration: 4,
       opacity: 0,
-      ease: 'power2.inOut',
-    });
-  }
-
-  animateSubscribeButton() {
-    gsap.from('input', {
-      y: 300,
-      duration: 1,
-      delay: 0.5,
-      ease: 'power2.inOut',
-      opacity: 0,
-      stagger: 0.5,
-    });
-  }
-
-  animateLandingImage() {
-    gsap.from('.img_landing', {
-      x: 200,
       ease: 'elastic.out',
-      duration: 3,
     });
   }
 
   animateSocialMediaIcons() {
     gsap.from('.socials-container img', {
+      delay: 3,
       x: 300,
       duration: 1,
       stagger: 0.3,
@@ -65,8 +44,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.animateSubheading();
-    this.animateSubscribeButton();
-    this.animateLandingImage();
     this.animateSocialMediaIcons();
   }
 }
