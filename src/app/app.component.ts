@@ -37,9 +37,9 @@ export class AppComponent implements OnInit {
   }
 
   animateSocialMediaIcons() {
-    gsap.from('.socials-container img', {
+    gsap.from('.logo', {
       delay: 1,
-      x: 300,
+      y: 100,
       duration: 1,
       stagger: 0.3,
       opacity: 0,

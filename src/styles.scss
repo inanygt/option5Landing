@@ -56,6 +56,7 @@ main {
 
     .error {
       position: absolute;
+      font-size: 0.9rem;
       top: 4rem;
       font-weight: 500;
       letter-spacing: 0.3px;
@@ -77,21 +78,6 @@ nav {
   display: flex;
   align-items: start;
   justify-content: space-between;
-}
-
-.socials-container {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-
-  > img {
-    width: 22px;
-    height: 22px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
 .subheading {
@@ -166,39 +152,41 @@ input[type='email'] {
   }
 }
 
-.logo_facebook {
-  background-image: url('assets/logo_facebook.svg');
-  width: 22px;
-  height: 22px;
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
 
-  &:hover {
-    background-image: url('assets/logo_facebook--colored.svg');
+  .logo {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.2s ease;
+    width: 22px;
+    height: 22px;
   }
-}
 
-.logo {
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: all 0.2s ease;
-}
+  .logo_facebook {
+    background-image: url('assets/logo_facebook.svg');
 
-.logo_twitter {
-  background-image: url('assets/logo_twitter.svg');
-  width: 22px;
-  height: 22px;
-
-  &:hover {
-    background-image: url('assets/logo_twitter--colored.svg');
+    &:hover {
+      background-image: url('assets/logo_facebook--colored.svg');
+    }
   }
-}
 
-.logo_instagram {
-  background-image: url('assets/logo_instagram.svg');
-  width: 22px;
-  height: 22px;
+  .logo_twitter {
+    background-image: url('assets/logo_twitter.svg');
 
-  &:hover {
-    background-image: url('assets/logo_instagram--colored.svg');
+    &:hover {
+      background-image: url('assets/logo_twitter--colored.svg');
+    }
+  }
+
+  .logo_instagram {
+    background-image: url('assets/logo_instagram.svg');
+
+    &:hover {
+      background-image: url('assets/logo_instagram--colored.svg');
+    }
   }
 }
