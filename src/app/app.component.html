@@ -2,15 +2,15 @@
   <nav>
     <img class="logo_option5" src="/assets/logo_option5.png" alt="logo of the studio option 5" />
     <div class="socials-container">
-      <img src="/assets/logo_facebook.svg" alt="logo of facebook" />
-      <img src="/assets/logo_twitter.svg" alt="logo of twitter" />
-      <img src="/assets/logo_instagram.svg" alt="logo of instagram" />
+      <a class="logo logo_facebook"></a>
+      <a class="logo logo_twitter"></a>
+      <a class="logo logo_instagram"></a>
     </div>
   </nav>
 
   <main>
     <div class="main-left">
-      <div class="subheading" #subheading>Coming soon</div>
+      <div class="subheading">Coming soon</div>
       <div class="heading">Get notified when we will launch!</div>
 
       <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">

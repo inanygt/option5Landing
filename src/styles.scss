@@ -165,3 +165,40 @@ input[type='email'] {
     flex-direction: column;
   }
 }
+
+.logo_facebook {
+  background-image: url('assets/logo_facebook.svg');
+  width: 22px;
+  height: 22px;
+
+  &:hover {
+    background-image: url('assets/logo_facebook--colored.svg');
+  }
+}
+
+.logo {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+
+.logo_twitter {
+  background-image: url('assets/logo_twitter.svg');
+  width: 22px;
+  height: 22px;
+
+  &:hover {
+    background-image: url('assets/logo_twitter--colored.svg');
+  }
+}
+
+.logo_instagram {
+  background-image: url('assets/logo_instagram.svg');
+  width: 22px;
+  height: 22px;
+
+  &:hover {
+    background-image: url('assets/logo_instagram--colored.svg');
+  }
+}
