@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import gsap from 'gsap';
 
@@ -9,6 +10,22 @@ import gsap from 'gsap';
 })
 export class AppComponent implements OnInit {
   title = 'optionFive';
+
+  notificationForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.notificationForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+    });
+  }
+
+  onSubmit() {
+    if (this.notificationForm.valid) {
+      console.log(this.notificationForm.value);
+    }
+  }
+
+  tl = gsap.timeline();
 
   animateSubheading() {
     gsap.from('.subheading', {
