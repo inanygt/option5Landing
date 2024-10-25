@@ -9,7 +9,7 @@ import gsap from 'gsap';
 export class LandingImageComponent implements OnInit {
   animateRocket() {
     gsap.from('.rocket', {
-      delay: 0.5,
+      delay: 3.5,
       duration: 1.5,
       x: -400,
       y: 400,
@@ -21,6 +21,7 @@ export class LandingImageComponent implements OnInit {
 
   animateLandingImage() {
     gsap.from('.landing_img', {
+      delay: 3,
       opacity: 0,
       x: 200,
       ease: 'elastic.out',
