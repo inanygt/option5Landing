@@ -17,6 +17,12 @@ img {
   max-width: 100%;
 }
 
+#counter {
+  font-size: 4.6875rem;
+  color: $secondary;
+  font-weight: 700;
+}
+
 .invalid {
   border: 2px solid red;
 }
@@ -126,32 +132,6 @@ input[type='email'] {
   font-size: 1rem;
 }
 
-@media (max-width: $desktop-breakpoint) {
-  .root-container {
-    margin-block: 1rem;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-
-    .main-right {
-      justify-content: center;
-    }
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  .root-container {
-    padding-inline: 1rem;
-    margin-block: 0rem;
-    margin-inline: 0rem;
-  }
-
-  .socials-container {
-    flex-direction: column;
-  }
-}
-
 .socials-container {
   display: flex;
   flex-direction: row;
@@ -188,5 +168,31 @@ input[type='email'] {
     &:hover {
       background-image: url('assets/logo_instagram--colored.svg');
     }
+  }
+}
+
+@media (max-width: $desktop-breakpoint) {
+  .root-container {
+    margin-block: 1rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+
+    .main-right {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .root-container {
+    padding-inline: 1rem;
+    margin-block: 0rem;
+    margin-inline: 0rem;
+  }
+
+  .socials-container {
+    flex-direction: column;
   }
 }
